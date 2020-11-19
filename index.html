@@ -12,6 +12,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Boxicons CSS CDN -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/boxicons-master/css/boxicons.min.css">
 
@@ -30,12 +33,12 @@
             <nav class="nav-container">
 
                 <ul class="nav__list nav__menu" id="nav__menu">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#qualifications" class="nav__link">Qualifications</a></li>
-                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link active" id="home-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link" id="about-link">About Me</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link" id="services-link">Services</a></li>
+                    <li class="nav__item"><a href="#qualifications" class="nav__link" id="qualifications-link">Qualifications</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link" id="education-link">Education</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" id="home-link" id="contact-link">Contact Me</a></li>
 
                 </ul>
 
@@ -46,16 +49,16 @@
         </div>
     </header>
     <main class="main-body ">
-        <section class="home section">
+        <section class="home section" id="home">
             <div class="home-data bd-grid">
                 <div class="home-data__graphics">
                     <div class="home-data__img">
                         <img src="assets/img/brucey.png">
                     </div>
                     <div class="home-data__social">
-                        <i class="bx bxl-github"></i>
-                        <i class="bx bxl-facebook"></i>
-                        <i class="bx bxl-whatsapp"></i>
+                        <i class="bx bxl-github home-social"></i>
+                        <i class="bx bxl-facebook home-social"></i>
+                        <i class="bx bxl-whatsapp home-social"></i>
                     </div>
                 </div>
                 <div class="home-data__message">
@@ -69,9 +72,9 @@
                 </div>
             </div>
         </section>
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="about-container ">
-                <h2 class="section-title">
+                <h2 class="section-title about-section__title">
                     About Me
                 </h2>
                 <div class="about-data bd-grid">
@@ -85,9 +88,9 @@
                 </div>
         </section>
 
-        <section class="services section">
+        <section class="services section" id="services">
             <div class="services-container">
-                <h2 class="section-title">
+                <h2 class="section-title services-section__title">
                     Services
                 </h2>
                 <div class="services-list bd-grid">
@@ -132,7 +135,7 @@
                     </div>
                     <div class="service">
                         <div class="service-icon-container">
-                            <i class="bx bx-cctv service-icon"></i>
+                            <i class="bx bxs-check-shield service-icon"></i>
                         </div>
                         <div class="service-details">
                             <span class="service-name">
@@ -159,13 +162,13 @@
                 </div>
             </div>
         </section>
-        <section class="qualifications section">
+        <section class="qualifications section" id="qualifications">
             <div class="qualifications-container">
-                <h2 class="section-title">
+                <h2 class="section-title qualifications-section__title">
                     Qualifications
                 </h2>
                 <div class="qualifications-types bd-grid">
-                    <div class="frontend-container">
+                    <div class="frontend-container qualification-types__container">
                         <span class="frontend-title qualification-type__title">
                             Frontend
                         </span>
@@ -230,13 +233,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="backend-container">
+                    <div class="backend-container qualification-types__container">
                         <span class="backend-title qualification-type__title">
                             Backend
                         </span>
                         <div class="python-container language-container top-language">
                             <div class="python-data language-data">
-                                <i class="bx bxl-html5 language-icon"></i>
+                                <i class='bx bxl-python language-icon'></i>
                                 <span class="python-name language-name">
                                     Python
                                 </span>
@@ -269,9 +272,9 @@
                 </div>
             </div>
         </section>
-        <section class="education section">
+        <section class="education section" id="education">
             <div class="education-container">
-                <h2 class="section-title">
+                <h2 class="section-title education-section__title">
                     Education
                 </h2>
                 <div class="education-list bd-grid">
@@ -341,20 +344,20 @@
                 </div>
             </div>
         </section>
-        <section class="contact section">
+        <section class="contact section" id="contact">
             <div class="contact-container">
-                <h2 class="section-title">
+                <h2 class="section-title contact-section__title">
                     Contact Me
                 </h2>
                 <div class="contact-form__container bd-grid">
                     <div class="form-container">
                         <form action="post" class="contact-form">
 
-                            <input type="text" class="name-input" placeholder="Name">
-                            <input type="email" class="contact-email" placeholder="Email">
-                            <input type="number" class="name-input" placeholder="Phone">
+                            <input type="text" class="name-input form-input" placeholder="Name">
+                            <input type="email" class="contact-email form-input" placeholder="Email">
+                            <input type="number" class="name-input form-input" placeholder="Phone">
 
-                            <textarea name="message" id="" cols="30" rows="10" class="message-textarea" placeholder="Message"></textarea>
+                            <textarea name="message" id="" cols="30" rows="10" class="message-textarea form-input" placeholder="Message"></textarea>
                             <input type="submit" class="button send-mail" value="Send">
                         </form>
                     </div>
@@ -389,15 +392,16 @@
     </main>
     <footer>
         <div class="footer-container">
-            <span class="copy-span"><small>All rights reserved &copy2020</small></span>
-            <span class="developer-info">This Website is powered by</span>
-            <div class="powered-by">
+            <span class="copy-span footer-row"><small>All rights reserved &copy2020</small></span>
+            <span class="developer-info footer-row">This Website is powered by</span>
+            <div class="powered-by footer-row">
                 <i class="bx bxl-html5 powered-by__icon"></i>
                 <i class="bx bxl-css3 powered-by__icon"></i>
                 <i class="bx bxl-javascript powered-by__icon"></i>
             </div>
         </div>
     </footer>
+    <script src="js/scrollreveal/dist/scrollreveal.js"></script>
     <script src="js/main.js"></script>
 </body>
 

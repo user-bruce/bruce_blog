@@ -665,6 +665,8 @@ section {
     margin-bottom: var(--mb-2);
 }
 
+.contact-form textarea,
+.contact-form input,
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     font-family: var(--body-font);
